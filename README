@@ -1,1 +1,3 @@
 To setup, put the dotfiles directory in your home dir and run setup.sh from your home dir.
+
+This will setup symbolic links, clone vundle, and run BundleInstall.

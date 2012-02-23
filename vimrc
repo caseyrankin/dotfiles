@@ -39,6 +39,8 @@ nmap <silent> <Leader>f :NERDTreeToggle<CR>
 Bundle 'kien/ctrlp.vim'
 let g:ctrlp_match_window_bottom = 0                    " moves crtl p window to top
 let g:ctrlp_match_window_reversed = 0                  " lists results from top to bottom
+let g:ctrlp_max_height = 30                            " length of results box
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'    " don't include matching files in results
 " leader-t to do file search
 nmap <silent> <Leader>t :CtrlP<CR>
 " leader-b to do buffer search
