@@ -66,7 +66,6 @@ set smartcase                                          " ... unless they contain
 "SPACING SETTINGS
 set autoindent                                         " automatic indent new lines
 set smartindent                                        " be smart about it=
-set nowrap                                             " do not wrap lines
 set tabstop=2
 set shiftwidth=2
 set expandtab                                          " expand tabs to spaces
