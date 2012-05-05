@@ -8,6 +8,8 @@ filetype plugin indent on                              " enable indenting (requi
 set modeline                                           " make sure modeline support is enabled
 set autoread                                           " reload files (no local changes only)
 syntax on                                              " highlight syntax
+set backupdir=/tmp//                                   " put swap files and backups in tmp
+set directory=/tmp//
 
 "VUNDLE SETTINGS
 set rtp+=~/.vim/bundle/vundle/
