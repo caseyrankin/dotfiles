@@ -41,6 +41,18 @@ let g:ctrlp_match_window_bottom = 0                    " moves crtl p window to 
 let g:ctrlp_match_window_reversed = 0                  " lists results from top to bottom
 let g:ctrlp_max_height = 30                            " length of results box
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'    " don't include matching files in results
+let g:ctrlp_max_files = 10000                          " set the max files
+
+" optimize file searching on unix systems using find, source: https://gist.github.com/ee14d6ecb9196a07da56
+if has("unix")
+    let g:ctrlp_user_command = {
+                \   'types': {
+                \       1: ['.git/', 'cd %s && git ls-files']
+                \   },
+                \   'fallback': 'find %s -type f | head -' . g:ctrlp_max_files
+                \ }
+endif
+
 " leader-t to do file search
 nmap <silent> <Leader>t :CtrlP<CR>
 " leader-b to do buffer search
