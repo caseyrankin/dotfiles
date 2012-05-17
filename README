@@ -1,3 +1,8 @@
 To setup, put the dotfiles directory in your home dir and run setup.sh from your home dir.
 
 This will setup symbolic links, clone vundle, and run BundleInstall.
+
+Note: system vim for macos has a bug where it incorrectly returns error status, which messes 
+up using it as an editor for git.  To use mvim as the editor instead, add this to .bashrc:
+
+EDITOR="mvim -v"
