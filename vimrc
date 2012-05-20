@@ -44,16 +44,6 @@ let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'    " don't include matching 
 let g:ctrlp_max_files = 10000                          " set the max files
 let g:ctrlp_working_path_mode = 0
 
-" optimize file searching on unix systems using find, source: https://gist.github.com/ee14d6ecb9196a07da56
-if has("unix")
-    let g:ctrlp_user_command = {
-                \   'types': {
-                \       1: ['.git/', 'cd %s && git ls-files']
-                \   },
-                \   'fallback': 'find %s -type f | head -' . g:ctrlp_max_files
-                \ }
-endif
-
 " leader-t to do file search
 nmap <silent> <Leader>t :CtrlP<CR>
 " leader-b to do buffer search
