@@ -1,0 +1,1 @@
+/Users/jesse/dotfiles/vim/bundle/vim-coffee-script/ftdetect/coffee.vim

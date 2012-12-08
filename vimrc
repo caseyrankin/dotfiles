@@ -4,12 +4,12 @@ let mapleader=','                                      " set leaderkey
 filetype off                                           " required by vundle
 set history=100000                                     " lots of command line history
 set ffs=unix,dos,mac                                   " use correct line terminators
-filetype plugin indent on                              " enable indenting (required for Vundle)
 set modeline                                           " make sure modeline support is enabled
 set autoread                                           " reload files (no local changes only)
 syntax on                                              " highlight syntax
 set backupdir=/tmp//                                   " put swap files and backups in tmp
 set directory=/tmp//
+set iskeyword-=_                                      " use _ as word break
 
 "VUNDLE SETTINGS
 set rtp+=~/.vim/bundle/vundle/
@@ -19,6 +19,12 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tsaleh/vim-matchit'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/nerdcommenter'
+Bundle 'vim-scripts/tComment'
+
+filetype plugin indent on                              " enable indenting (required for Vundle)
 
 "ACK SETTINGS
 Bundle 'mileszs/ack.vim'
